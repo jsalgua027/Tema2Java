@@ -17,9 +17,9 @@ public class Ej05 {
      * verdad de las operaciones lógicas && (AND) y || (OR), usando las
      * variables verdadero y falso. Usa text blocks y lla instrucción println()
      * para mostrar los resultados de evaluar las siguientes expresiones
-     * lógicas: verdadero && verdadero verdadero && falso falso && verdadero
-     * falso && falso verdadero || verdadero verdadero || falso falso ||
-     * verdadero falso || falso
+     * lógicas: verdadero && verdadero ,verdadero && falso ,falso && verdadero
+     * falso && falso ,verdadero || verdadero, verdadero || falso ,falso ||
+     * verdadero ,falso || falso
      *
      * c.- Muestra en pantalla el resultado de las expresiones !verdadero y
      * !falso.
@@ -30,7 +30,21 @@ public class Ej05 {
        boolean verdadero= true;
        boolean falso=false;
        //b
-       
+        System.out.println("verdadero && verdadero es "+(verdadero&&verdadero));
+        System.out.println("verdadero&&falso es "+(verdadero&&falso));
+        System.out.println("falso && verdadero es "+(falso && verdadero));
+        System.out.println("falso && falso es "+(falso && falso));
+        System.out.println("verdadero || verdadero es "+(verdadero || verdadero));
+        System.out.println("verdadero || falso es "+(verdadero || falso));
+        System.out.println("falso || verdadero es "+(falso || verdadero));
+        System.out.println("falso || falso es "+(falso || falso));
+        
+        
+        //c
+        System.out.println("********************************************");
+        System.out.println("!verdadero es  " +!verdadero);
+        System.out.println("!verdadero es  " +!falso);
+        
               
     }
 
