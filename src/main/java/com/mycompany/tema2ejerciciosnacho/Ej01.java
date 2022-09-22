@@ -25,7 +25,7 @@ f.- Utilizaprintf(), para limitar a dos dígitos la salida de variables de tipo 
         byte a = 1;
         short b = 2;
         int c = 3;
-        long d = 4;
+        long d = 4l;
         double g = 15.445;
         boolean casa = true;
         float h = 7.556f;
@@ -42,8 +42,8 @@ f.- Utilizaprintf(), para limitar a dos dígitos la salida de variables de tipo 
         System.out.println("****************************************");
         System.out.println("la variable boolean casa indica que es: " + casa);
         System.out.println("*****************APARTADO F***********************");
-        System.out.printf("%.2f%n", h);
-        System.out.printf("%.2f%n", g);
+        System.out.printf("La variable vale %.2f%n", h);
+        System.out.printf("La variable vale %.2f%n", g);
         
         
     }
