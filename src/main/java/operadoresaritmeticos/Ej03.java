@@ -43,8 +43,11 @@ public class Ej03 {
         double resultadoRestaDecimales = c - d;
         double resultadoMultiplicacionDecimales = c * d;
         double resultadoDivisionDecimales = c / d;
+        //casting para que uno de ellos sea double  double 
+        // int resultadoDivisionEnteros = a / (double)b; Casting explicito!!!!!
 
         //d
+        //los resultado los estoy imprimiendo en diferentes lineas
         System.out.println("El resultado es= " + resultadoSumaEnteros);
         System.out.println("El resultado es= " + resultadoRestaEnteros);
         System.out.println("El resultado es= " + resultadoMultiplicacionEnteros);
@@ -55,22 +58,55 @@ public class Ej03 {
         System.out.println("El resultado es= " + resultadoMultiplicacionDecimales);
         System.out.println("El resultado es= " + resultadoDivisionDecimales);
         System.out.println("****************APARTADO C********************");
-        //c 
+        
+        // en un solo codigo con el printf indicando la cantidad de decimales % f por el tipo de variable 
+        // y la cantidad de decimales------> %.3f con 3 decimales por jemplo 
+        System.out.printf("suma %.3f resta %.4f multiplicacion %.2f division %.1f",
+                 resultadoSumaDecimales, resultadoRestaDecimales,
+                resultadoMultiplicacionDecimales, resultadoDivisionDecimales);
 
-        a *= 3;
-        b -= 1;
-        c += d;
+        // imprimo los enteros en un text block-----> con las tres comillas 
+        //  se mete en un String para ello y despues imprimo el String
+        String resultadoTextBlock = """
+                                    la suma es= %d
+                                    la resta es= %d
+                                    la multiplicacion es= %d
+                                    la division es= %d
+                                                                   
+                                                                      
+                                    """.formatted(resultadoSumaEnteros, resultadoRestaEnteros,
+                resultadoMultiplicacionEnteros, resultadoDivisionEnteros);
+        
+        System.out.println(resultadoTextBlock);
+
+        //c 
+        a *= 3; // a = a*3
+        b -= 1; // b =b-1
+        c += d; // c= c+d
         System.out.println("El resultado es= " + a);
         System.out.println("El resultado es= " + b);
         System.out.println("El resultado es= " + c);
         System.out.println("****************APARTADO F********************");
-        //f    
-        System.out.println(i);
-        System.out.println(i++);
-        System.out.println(i);
-        System.out.println(++i);
-        
+        //f    OJO MUY IMPORTANTE
+        System.out.println("i: "+i);
+        System.out.println("i++:"+ (i++));// i++ primero se usa el valor y despues se autoincrementa
+        System.out.println("i: "+i);
+        System.out.println("++i:"+(++i));// ++i primero autoincrementa y despues usa el valor
 
+        
+        // Modulo [ % ] IMPORTANTE
+        
+        a= 11;
+        b= 5;
+        
+        int cociente=a/b;
+        int resto =a%b;
+        
+        System.out.println("cociente "+ cociente + "resto "+ resto);
+        
+        
+        
+        
     }
 
 }

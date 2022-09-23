@@ -30,13 +30,13 @@ public class Ej01 {
 
         //solicitos los datos 
         System.out.println("Indique los grados que quiere transformar ");
-        gradosPedidos = entrada.nextInt();
+        gradosPedidos = entrada.nextDouble();
         //proceso
         resultado = (gradosPedidos * CONVERSOR_FAHRENHEIT) + CONVERSOR_FAHRENHEIT2;
 
         // muestro los datos
         System.out.println(gradosPedidos + " son = " + resultado + " Fahrenheit");
-
+           
     }
 
 }
