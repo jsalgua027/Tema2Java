@@ -31,14 +31,14 @@ public class Ej02 {
         //El area de una circunferencia es PI*radio al cuadrado
         double areaCircunferencia = 2 * PI * (Math.pow(radio, 2));
         // el volumen es radio al cubo por pi por 4/3.
-        double volumenCircunferencia = (Math.pow(radio, 3)) * PI * (4 / 3);
+        double volumenCircunferencia = (Math.pow(radio, 3)) * PI * (4.0 / 3);//ojo con la división 4/3 es división de enteros
 
       //  imprimo por pantalla el resultado
         System.out.println("""
-                           dado el radio: %f
-                           su longitud es: %f
-                           su area es: %f
-                           su volumen es: %f
+                           dado el radio: %.2f
+                           su longitud es: %.2f
+                           su area es: %.2f
+                           su volumen es: %.2f
                            
                            
                            """.formatted(radio, longitudCircunferencia, areaCircunferencia, volumenCircunferencia));
