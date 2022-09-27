@@ -51,7 +51,7 @@ public class Ej11 {
         double areaTotalFigura= areaSemiCirculo+areaTrianguloEquila;
         
         System.out.println("El area de la figura es= " + areaTotalFigura);
-        
+        //
     }
 
 }

@@ -47,7 +47,7 @@ public class Ej10 {
 
         //muestro el resultado
         JOptionPane.showMessageDialog(null, "El area total es de: " + areaTotal);
-
+//
     }
 
 }
