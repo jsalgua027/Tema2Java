@@ -20,9 +20,9 @@ public class Ej03 {
         //entrada de teclado
         Scanner teclado = new Scanner(System.in);
         //variables para la entrada de teclado
-        float variable1 = 0;
-        float variable2 = 0;
-        float variable3 = 0;
+        float variable1 = 0f;
+        float variable2 = 0f;
+        float variable3 = 0f;
 
         //solicito las variables
         System.out.println("Indique el primer numero decimal");
@@ -32,7 +32,7 @@ public class Ej03 {
         System.out.println("Indique el tercer numero decimal");
         variable3 = teclado.nextFloat();
         // variable para realizar el calculo
-        float mediaVariables = (variable1 + variable2 + variable3) / 3;
+        float mediaVariables = (variable1 + variable2 + variable3) / 3.0f;
         System.out.println("La media de las tres variables es= " + mediaVariables);
 
     }
