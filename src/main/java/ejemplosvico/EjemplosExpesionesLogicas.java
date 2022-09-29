@@ -23,8 +23,6 @@ public class EjemplosExpesionesLogicas {
         guardar en variables boolenas el resultado d evaluar las siguients expresiones
         .Usa equalsIgnorecase de los Strings
          */
-       
-       
         String nombre, apellido;
         int edad, estatura;
         double peso;
@@ -59,13 +57,13 @@ public class EjemplosExpesionesLogicas {
         System.out.println("****************APARTADO A******************");
         boolean a = edad >= 25 && edad <= 35;
         System.out.println("¿edad esta entre 25 y 35? " + a);
-        //B el peso es mayor de 50kg o menor o igual de 1000kg
+        //B el peso es mayor de 50kg o menor o igual de 100kg
         System.out.println("*************APARTADO B *****************");
-        boolean b = peso > 50 && peso < 100;
+        boolean b = peso > 50 || peso <= 100;
         System.out.println("El peso esta entre 50kg y 100kg " + b);
         //C no mide 175cm
         System.out.println("*************APARTADO C**************");
-        boolean c = !(estatura == 175);
+        boolean c = !(estatura == 175);// estatura!=175 -----> otra forma de expresarlo
         System.out.println("¿No es la estatura 175? " + c);
         //D la estatura esta entre 100cm y 180cm excluidos
         System.out.println("*************APARTADO D**************");
@@ -73,24 +71,25 @@ public class EjemplosExpesionesLogicas {
         System.out.println("¿Esta la altura por encima de 100cm y por debajo de 180cm? " + d);
         //E la edad mas 10 años no supera los 60 año
         System.out.println("*************APARTADO E**************");
-        boolean e = ((edad + 10) > 60);
+        boolean e = ((edad + 10) < 60);
         System.out.println("La edad mas 10 años, ¿No supera los 60 años? " + e);
         //F el nombre es igual a "Pablo". ignorando mayusculas y minusculas
         System.out.println("*************APARTADO F**************");
-        boolean f = (nombre.equalsIgnoreCase("pablo"));
+        boolean f = nombre.equalsIgnoreCase("pablo");
         System.out.println("El nombre es igual a Pablo= " + f);
-        //G si el apellido contienen  la letra "J" Usa contains de String
+        //G si el apellido contienen  la letra "j" Usa contains de String
         System.out.println("*************APARTADO G**************");
-        boolean g = nombre.contains("J");
-        System.out.println("El nombre contiene J = " + g);
+        boolean g = apellido.toLowerCase().contains("j");
+        System.out.println("El nombre contiene j = " + g);
         //H si el apellido termina en "-dez" usa endsWhith de los strings
-         System.out.println("*************APARTADO H**************");
-        boolean h= apellido.endsWith("dez");
-        System.out.println("¿El apellido finaliza por dez? " +h);
-         //I si la edad no esta entre los 40 y 50 años
-          System.out.println("*************APARTADO I**************");
-         boolean i = !(edad>=40 && edad<=50);
-         System.out.println("¿NO esta entre los 40 y los 50 años?" + i);
+        System.out.println("*************APARTADO H**************");
+        String intermedio = apellido.toLowerCase();
+        boolean h = intermedio.endsWith("dez");
+        System.out.println("¿El apellido finaliza por dez? " + h);
+        //I si la edad no esta entre los 40 y 50 años
+        System.out.println("*************APARTADO I**************");
+        boolean i = !(edad >= 40 && edad <= 50);
+        System.out.println("¿No esta entre los 40 y los 50 años?" + i);
 
     }
 
