@@ -17,22 +17,19 @@ public class Ej08 {
      */
     public static void main(String[] args) {
         // variables
-        
+
         Scanner entradaDatos = new Scanner(System.in); // objeto Scanner llamado entrada datos
         int tiempo; // el tiempo que se solicita por teclado y seran segundos
         System.out.println("Indique el tiempo a convertir");
-        tiempo= entradaDatos.nextInt();
-        
+        tiempo = entradaDatos.nextInt();
+
         //constantes 
-        final int SEGUNDOS = tiempo%60;
-        final  int MINUTOS= (tiempo%3600)/60;
-        final int HORAS = tiempo/3600;
-        
-        
-        System.out.println("Los segundos "+ tiempo +" son= "  + HORAS +" horas " + MINUTOS + " minutos "+ SEGUNDOS + " segundos ");
-        
-        
-        
+         int horas = tiempo / 3600; //obtengo las horas
+         int minutos = (tiempo % 3600) / 60;// obtengo minutos
+         int segundos = tiempo % 60; // obtengo segundo
+
+        System.out.println("Los segundos " + tiempo + " son= " + horas + " horas " + minutos + " minutos " + segundos + " segundos ");
+
     }
-    
+
 }
