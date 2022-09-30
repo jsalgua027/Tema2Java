@@ -5,6 +5,7 @@
 package ejemplosvico;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -37,21 +38,35 @@ public class EjemplosExpesionesLogicas {
         System.out.println("Introduce la edad");
         edad = teclado.nextInt();
         System.out.println("Su  edad es " + edad);
-        System.out.println("Intoduce el peso");
-        peso = teclado.nextDouble();
-        System.out.println("Su peso es " + peso);
-        System.out.println("introduce su estatura");
-        estatura = teclado.nextInt();
-        System.out.println("su estatura es " + estatura);
+//        System.out.println("Intoduce el peso");
+//        peso = teclado.nextDouble();
+//        System.out.println("Su peso es " + peso);
+//        System.out.println("introduce su estatura");
+//        estatura = teclado.nextInt();
+//        System.out.println("su estatura es " + estatura);
 
-        // limpiar porqueria
+        //Lectura de datos JOptions // no hace falta crear el objeto JOptionpanel
+        //ojo hay que crear una variable tipo String para meter los datos 
+        
+        apellido = JOptionPane.showInputDialog("Introduce Tu apellido ");
+        JOptionPane.showMessageDialog(null, "Tu apellido es " + apellido);
+        //variable tipo String donde meto los datos!!!!!!!!!!!!!!
+        String pesoString = JOptionPane.showInputDialog("Introduce el peso =");
+        // Uso la clase envolvente oara transformar el string en double
+        peso = Double.parseDouble(pesoString);
+        JOptionPane.showMessageDialog(null, "Tu apellido es " + peso);
+        String estaturaString = JOptionPane.showInputDialog("Introduce la estatura ");
+        estatura = Integer.parseInt(estaturaString);
+        JOptionPane.showMessageDialog(null, "Tu apellido es " + estatura);
+        
+        // limpiar porqueria solo se hace con la pedida de datos por consola cuando es de numero a textos
         teclado.nextLine();//Ojo!!!!!!!!!!!!!!!!
         System.out.println("introduce tu nombre");
         nombre = teclado.nextLine();
         System.out.println("tu nombre es " + nombre);
         System.out.println("introduce tu apellido");
-        apellido = teclado.nextLine();
-        System.out.println("tu apellido es " + apellido);
+//        apellido = teclado.nextLine();
+//        System.out.println("tu apellido es " + apellido);
 
         //A si la edad esta comprendida enre 25 y 35 años incluido 
         System.out.println("****************APARTADO A******************");
