@@ -32,24 +32,24 @@ public class Ej11 {
      *
      */
     public static void main(String[] args) {
-        double r=0;// siendo r radio
-        double h=0;// siendo h un lado del triangulo
-        
+        double r = 0;// siendo r radio
+        double h = 0;// siendo h un lado del triangulo
+
         Scanner datos = new Scanner(System.in);
-        
+
         System.out.println("Indique que radio tiene el semi circulo ");
-        r=datos.nextDouble();
+        r = datos.nextDouble();
         System.out.println("Indique que dimension tiene uno de los lados del triangulo");
-        h=datos.nextDouble();
+        h = datos.nextDouble();
         //cálculo el area del semi circulo
-        double areaSemiCirculo=(Math.PI*Math.pow(r, 2))/2;
+        double areaSemiCirculo = (Math.PI * Math.pow(r, 2)) / 2;
         //Cálculo el area del tringulo equilatero
-        double catetoTrinaguloRect=h/2;// variable para realizar pitagoras
-        double alturaTrinaguloEquila= Math.sqrt(Math.pow(h, 2)- Math.pow(catetoTrinaguloRect, 2));//obtengo la altura
-        double areaTrianguloEquila=(h*alturaTrinaguloEquila)/2;
+        double catetoTrinaguloRect = h / 2;// variable para realizar pitagoras
+        double alturaTrinaguloEquila = Math.sqrt(Math.pow(h, 2) - Math.pow(catetoTrinaguloRect, 2));//obtengo la altura
+        double areaTrianguloEquila = (h * alturaTrinaguloEquila) / 2;
         //obtengo el resultado definitivo
-        double areaTotalFigura= areaSemiCirculo+areaTrianguloEquila;
-        
+        double areaTotalFigura = areaSemiCirculo + areaTrianguloEquila;
+
         System.out.println("El area de la figura es= " + areaTotalFigura);
         //
     }
