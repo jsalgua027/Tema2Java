@@ -5,6 +5,7 @@
 package algoritmossecunciales;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -37,10 +38,12 @@ public class Ej11 {
 
         Scanner datos = new Scanner(System.in);
 
-        System.out.println("Indique que radio tiene el semi circulo ");
-        r = datos.nextDouble();
-        System.out.println("Indique que dimension tiene uno de los lados del triangulo");
-        h = datos.nextDouble();
+//        System.out.println("Indique que radio tiene el semi circulo ");
+//        r = datos.nextDouble();
+        r = Double.parseDouble(JOptionPane.showInputDialog("¿Cuanto mide el radio del semi circulo?"));
+//        System.out.println("Indique que dimension tiene uno de los lados del triangulo");
+//        h = datos.nextDouble();
+        h = Double.parseDouble(JOptionPane.showInputDialog("Indique que dimension tiene uno de los lados del triangulo "));
         //cálculo el area del semi circulo
         double areaSemiCirculo = (Math.PI * Math.pow(r, 2)) / 2;
         //Cálculo el area del tringulo equilatero
@@ -49,9 +52,13 @@ public class Ej11 {
         double areaTrianguloEquila = (h * alturaTrinaguloEquila) / 2;
         //obtengo el resultado definitivo
         double areaTotalFigura = areaSemiCirculo + areaTrianguloEquila;
-
-        System.out.println("El area de la figura es= " + areaTotalFigura);
-        //
+        // genero un String para mostrar solo tres decimales
+        String totalTresDecimales ="""
+                                   El area total es de: %.3f
+                                   """.formatted(areaTotalFigura);
+        //System.out.println("El area de la figura es= " + areaTotalFigura);
+        JOptionPane.showMessageDialog(null, totalTresDecimales);
+        
     }
 
 }
