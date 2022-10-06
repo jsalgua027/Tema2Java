@@ -5,6 +5,7 @@
 package algoritmossecunciales;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,9 +23,11 @@ public class Ej02 {
         //variables para el algoritmo
         Scanner teclado = new Scanner(System.in);
         final double PI = 3.14; //constante PI para los calculos
-        
-        System.out.println("Indique el radio de la circunferencia");
-        double radio = teclado.nextDouble();
+
+//        System.out.println("Indique el radio de la circunferencia");
+//        double radio = teclado.nextDouble();
+        //realizo el ejercicio con JOptionPanel
+        double radio = Double.parseDouble(JOptionPane.showInputDialog(null, "Indique el radio de la circunferencia "));
         // realizamos los calculos 
         //Longuitud de una circunferencia es 2*pi*radio
         double longitudCircunferencia = 2 * PI * radio;
@@ -33,17 +36,30 @@ public class Ej02 {
         // el volumen es radio al cubo por pi por 4/3.
         double volumenCircunferencia = (Math.pow(radio, 3)) * PI * (4.0 / 3);//ojo con la división 4/3 es división de enteros
 
-      //  imprimo por pantalla el resultado
-        System.out.println("""
+        //  imprimo por pantalla el resultado
+//        System.out.println("""
+//                           dado el radio: %.2f
+//                           su longitud es: %.2f
+//                           su area es: %.2f
+//                           su volumen es: %.2f
+//                           
+//                           
+//                           """.formatted(radio, longitudCircunferencia, areaCircunferencia, volumenCircunferencia));
+
+
+         
+        String resultado= """
                            dado el radio: %.2f
                            su longitud es: %.2f
                            su area es: %.2f
                            su volumen es: %.2f
                            
                            
-                           """.formatted(radio, longitudCircunferencia, areaCircunferencia, volumenCircunferencia));
-
-          
+                           """.formatted(radio, longitudCircunferencia, areaCircunferencia, volumenCircunferencia);
+        
+        JOptionPane.showMessageDialog(null, resultado);
+        
     }
-    
+   
+
 }

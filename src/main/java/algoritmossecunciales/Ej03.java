@@ -5,6 +5,7 @@
 package algoritmossecunciales;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,15 +26,20 @@ public class Ej03 {
         float variable3 = 0f;
 
         //solicito las variables
-        System.out.println("Indique el primer numero decimal");
-        variable1 = teclado.nextFloat();
-        System.out.println("Indique el segundo numero decimal");
-        variable2 = teclado.nextFloat();
-        System.out.println("Indique el tercer numero decimal");
-        variable3 = teclado.nextFloat();
+//        System.out.println("Indique el primer numero decimal");
+//        variable1 = teclado.nextFloat();
+        variable1 = Float.parseFloat(JOptionPane.showInputDialog("Indique el primer numero decimal"));
+//        System.out.println("Indique el segundo numero decimal");
+//        variable2 = teclado.nextFloat();
+        variable2 = Float.parseFloat(JOptionPane.showInputDialog("Indique el segundo numero decimal"));
+//        System.out.println("Indique el tercer numero decimal");
+//        variable3 = teclado.nextFloat();
+        variable3 = Float.parseFloat(JOptionPane.showInputDialog("Indique el tercer numero decimal"));
         // variable para realizar el calculo
         float mediaVariables = (variable1 + variable2 + variable3) / 3.0f;
-        System.out.println("La media de las tres variables es= " + mediaVariables);
+//        System.out.println("La media de las tres variables es= " + mediaVariables);
+        
+        JOptionPane.showMessageDialog(null, "La media de las tres variables es= " + mediaVariables);
 
     }
 

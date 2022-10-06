@@ -5,6 +5,7 @@
 package algoritmossecunciales;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,13 +26,14 @@ public class Ej04 {
         // entrada de datos
         Scanner teclado = new Scanner(System.in);
         int kilometros;// variable para recoger los datos 
-        
-        System.out.println("Indica los kilometros a recorrer");
-        kilometros=teclado.nextInt();
-        
-        double resultado= PRECIO_MINIMO+(kilometros*PRECIO_POR_KILOMETRO);
-        
-        System.out.println("El presupuesto para esos kilometro es de= "+ resultado+ " euros");
+
+//        System.out.println("Indica los kilometros a recorrer");
+//        kilometros=teclado.nextInt();
+        kilometros = Integer.parseInt(JOptionPane.showInputDialog("Indica los kilometros a recorrer"));
+        double resultado = PRECIO_MINIMO + (kilometros * PRECIO_POR_KILOMETRO);
+
+//        System.out.println("El presupuesto para esos kilometro es de= "+ resultado+ " euros");
+        JOptionPane.showMessageDialog(null, "El presupuesto para esos kilometros es de= " + resultado + " euros");
     }
 
 }

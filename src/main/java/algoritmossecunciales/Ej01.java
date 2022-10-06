@@ -5,6 +5,7 @@
 package algoritmossecunciales;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,13 +30,15 @@ public class Ej01 {
         Scanner entrada = new Scanner(System.in);
 
         //solicitos los datos 
-        System.out.println("Indique los grados que quiere transformar ");
-        gradosPedidos = entrada.nextDouble();
+//        System.out.println("Indique los grados que quiere transformar ");
+//        gradosPedidos = entrada.nextDouble();
+        gradosPedidos= Double.parseDouble(JOptionPane.showInputDialog("Indique los grados que quiere convertir"));
         //proceso
         resultado = (gradosPedidos * CONVERSOR_FAHRENHEIT) + CONVERSOR_FAHRENHEIT2;
 
         // muestro los datos
-        System.out.println(gradosPedidos + " son = " + resultado + " Fahrenheit");
+        JOptionPane.showMessageDialog(null,gradosPedidos+ " Centigrados  son = " + resultado+ " Fahrenheit");
+      //  System.out.println(gradosPedidos + " son = " + resultado + " Fahrenheit");
            
     }
 
