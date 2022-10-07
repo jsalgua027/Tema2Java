@@ -36,7 +36,7 @@ public class Ej11 {
         double r = 0;// siendo r radio
         double h = 0;// siendo h un lado del triangulo
 
-        Scanner datos = new Scanner(System.in);
+    //    Scanner datos = new Scanner(System.in);
 
 //        System.out.println("Indique que radio tiene el semi circulo ");
 //        r = datos.nextDouble();
