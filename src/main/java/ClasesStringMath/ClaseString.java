@@ -16,7 +16,7 @@ public class ClaseString {
     public static void main(String[] args) {
 
         String s = "iesmardealboran.com";
-
+        
         // Tamaño de la cadena
         System.out.println("Tamaño: " + s.length());
 
